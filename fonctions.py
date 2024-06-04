@@ -53,6 +53,25 @@ def auto_forward_backward(Thymio, i, motor_speed=100) :
         Thymio.setSpeedRight(-motor_speed)
 
 
+def auto_FB_LR(Thymio, i, motor_speed=100) :
+
+    if(i == 1) or (i == 2) or (i == 3) :
+        Thymio.setSpeedLeft(motor_speed)
+        Thymio.setSpeedRight(motor_speed)
+
+    elif(i == 4) or (i == 5) or (i == 6) :
+        Thymio.setSpeedLeft(motor_speed)
+        Thymio.setSpeedRight(-motor_speed)
+
+    elif(i == 7) or (i == 8) or (i == 9) :
+        Thymio.setSpeedLeft(-motor_speed)
+        Thymio.setSpeedRight(-motor_speed)
+
+    elif(i == 10) or (i == 11) or (i == 12)  :
+        Thymio.setSpeedLeft(-motor_speed)
+        Thymio.setSpeedRight(motor_speed)
+
+
 def ext_interaction(Thymio, motor_speed=100) :
 
     if(Thymio.prox[5] > 2000) and (Thymio.prox[5] > 2000) :

@@ -35,7 +35,7 @@ class ButtonFrontThread(threading.Thread):
 
             if(self.robot.button_forward) :
 
-                self.random_integer = random.randint(1,5)
+                self.random_integer = random.randint(1,3)
 
 
             color = [24,0,0,0,0,0,0,0]
@@ -43,7 +43,7 @@ class ButtonFrontThread(threading.Thread):
 
             self.robot.setLEDTop([32,0,32])
 
-            print(self.random_integer)
+            # print(self.random_integer)
 
             # fonctions.no_costume(self.robot, motor_speed=0)
 
@@ -65,6 +65,8 @@ class ButtonFrontThread(threading.Thread):
                 self.i = self.i + 1
 
                 fonctions.auto_forward_backward(self.robot, self.i, motor_speed=100)
+
+                print(self.i)
                 
                 if(self.i == 3) :
                     self.i = 0
@@ -72,6 +74,15 @@ class ButtonFrontThread(threading.Thread):
             elif(self.random_integer == 3) :
                 color = [24,0,0,24,0,0,0,0]
                 self.robot.setLEDCircle(color) 
+
+                self.i = self.i + 1
+
+                fonctions.auto_FB_LR(self.robot, self.i, motor_speed=100)
+
+                # print("i : ", self.i)
+                
+                if(self.i == 12) :
+                    self.i = 0
 
             elif(self.random_integer == 4) :
                 color = [24,0,0,0,24,0,0,0]
