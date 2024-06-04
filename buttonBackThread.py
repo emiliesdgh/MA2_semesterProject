@@ -17,7 +17,7 @@ class ButtonBackThread(threading.Thread):
         self.shutdown_event = threading.Event()  # Event to signal shutdown
 
         self.robot = robot
-        self.node = node
+        # self.node = node
         self.robot.leftNOTright = robot.leftNOTright
 
         self.i = 0

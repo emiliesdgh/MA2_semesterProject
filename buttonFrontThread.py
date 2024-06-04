@@ -23,6 +23,8 @@ class ButtonFrontThread(threading.Thread):
         self.robot = robot
 
         self.random_integer = 0
+        # self.robot.leftNOTright = robot.leftNOTright
+        self.i = 0
 
     def run(self):
         self.stop = False
@@ -31,20 +33,41 @@ class ButtonFrontThread(threading.Thread):
 
         while not self.stop:
 
+            if(self.robot.button_forward) :
+
+                self.random_integer = random.randint(1,5)
+
+
             color = [24,0,0,0,0,0,0,0]
             self.robot.setLEDCircle(color) 
 
             self.robot.setLEDTop([32,0,32])
 
-            fonctions.no_costume(self.robot, motor_speed=0)
+            print(self.random_integer)
+
+            # fonctions.no_costume(self.robot, motor_speed=0)
 
             if(self.random_integer == 1) :
                 color = [24,24,0,0,0,0,0,0]
                 self.robot.setLEDCircle(color) 
+
+                self.i = self.i + 1
+
+                fonctions.auto_ext_interaction(self.robot, self.i, motor_speed=100)
+                
+                if(self.i == 3) :
+                    self.i = 0
             
             elif(self.random_integer == 2) :
                 color = [24,0,24,0,0,0,0,0]
                 self.robot.setLEDCircle(color) 
+
+                self.i = self.i + 1
+
+                fonctions.auto_forward_backward(self.robot, self.i, motor_speed=100)
+                
+                if(self.i == 3) :
+                    self.i = 0
 
             elif(self.random_integer == 3) :
                 color = [24,0,0,24,0,0,0,0]

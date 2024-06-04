@@ -16,6 +16,8 @@ class ThymioStates :
 
         self.leftNOTright = True
 
+        self.buttonFrontYes = True
+
         self.auto = True
 
         self.allButtons = []

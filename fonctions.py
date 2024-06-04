@@ -36,6 +36,23 @@ def auto_ext_interaction(Thymio, i, motor_speed=100) :
         Thymio.setSpeedRight(-motor_speed)
 
 
+def auto_forward_backward(Thymio, i, motor_speed=100) :
+
+    if(i == 2) and (Thymio.auto) :
+        Thymio.auto = False
+
+    elif(i == 2) and (not Thymio.auto) :
+        Thymio.auto = True
+
+    if(Thymio.auto) :
+        Thymio.setSpeedLeft(motor_speed)
+        Thymio.setSpeedRight(motor_speed)
+
+    elif(not Thymio.auto) :
+        Thymio.setSpeedLeft(-motor_speed)
+        Thymio.setSpeedRight(-motor_speed)
+
+
 def ext_interaction(Thymio, motor_speed=100) :
 
     if(Thymio.prox[5] > 2000) and (Thymio.prox[5] > 2000) :
