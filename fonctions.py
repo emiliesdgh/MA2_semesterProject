@@ -141,13 +141,15 @@ def accelerometer_effect(Thymio, motor_speed=100) :
         Thymio.setLEDTop([0,0,32])
         # on the side
         Thymio.setSpeedLeft(0)
-        Thymio.setSpeedRight(motor_speed)
+        # Thymio.setSpeedRight(motor_speed)
+        Thymio.setSpeedRight(0)
 
     # DROITE
     if Thymio.accel[0]< -2: #Thymio is blue when placed on one of its sides
         Thymio.setLEDTop([0,0,32])
         # on the side
-        Thymio.setSpeedLeft(motor_speed)
+        # Thymio.setSpeedLeft(motor_speed)
+        Thymio.setSpeedLeft(0)
         Thymio.setSpeedRight(0)
 
     # DERRIERE
