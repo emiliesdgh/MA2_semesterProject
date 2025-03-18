@@ -1,0 +1,12 @@
+This semester project is based on the work of Léa Pereyre in the MOBOTS group. She has developed a set of costumes around the Thymio robot, which the robot animates with a few simple movements. Despite the very interesting aesthetic results obtained with this approach, some explorations of a better use of the Thymio’s sensors and a more sophisticated programming approach could be interesting to put into place while keeping in mind the original, aesthetic and educational aspect of the use of the Thymio.
+
+
+Within the framework of this project, I have three main goals. The first one is to implement a more advance programming approach, using various programming languages such as Python, VPL3 and Blockly. The second one is to exploit the full use of the Thymio sensors in combination with the existing costumes. And finally, the last goal is to use this research to enrich the educational context.
+
+The work for this project is divided in three major steps : an analysis of the costumes and sensors pairing, the development of an advance programming approach linked to each sensors and costume groups and finally, the creation of exercise sheets. The analysis is mostly to estimate the possibilities of the costume and sensor pairings which allowed me to develop a work strategy for the next step.
+
+The programming approach process is to study the use of each sensors one by one and developing either an interactive system or an autonomous system and repeating this iteratively with each costume groups. I decided to start with the Python language. I created a code for each sensors that, once completed, I adapted the same programs in the other languages : VPL3 and Blockly.
+
+As for the educational aspect, my goal is to create three separate activities, one in each programming language. These three activities are designed to increase in difficulty and to teach or challenge students with various and interesting approaches to programming.
+
+In conclusion, comparing these different programming languages is very interesting. Implementing the same programs across the various languages highlights the diverse approaches to programming topics at different levels. This demonstrates that these topics can be effectively introduced to students of various ages. Additionally, pairing the costumes with different programs is very engaging. It enhances the illustrated concepts by accentuating Thymio’s movements according to the chosen motions.
